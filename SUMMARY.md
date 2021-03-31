@@ -1,8 +1,6 @@
 # 目录
 
-1. [First Chapter](chapter1.md)
-
-
+1. [学习计划](/docs/README.md)
 
 
 
