@@ -3,7 +3,7 @@
    "author" : "simm",
    "description": "我的gitbook整理",
    "theme-default": {
-   "showLevel": true
+     "showLevel": true
    },
    "plugins": ["summary"]
 }
