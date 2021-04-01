@@ -2,6 +2,7 @@
    "title" : "公共服务组文档库",
    "author" : "simm",
    "description": "我的gitbook整理",
+   "language":"zh-hans",
    "theme-default": {
      "showLevel": true
    },
