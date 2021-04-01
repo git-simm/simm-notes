@@ -9,9 +9,7 @@
 
 ## 日常操作指令
 
-1. [docs/oper/canal/mysql.md](/docs/oper/canal/mysql.md)
-
-
+1. [mysql安装](//docs/oper/canal/mysql.md)
 
 
 
