@@ -1,27 +1,26 @@
 * [canal v1.1.4 文档手册](https://www.bookstack.cn/read/canal-v1.1.4/e015ba3570152b7a.md)
 * [CentOS7利用docker安装MySQL5.7](https://www.cnblogs.com/wjw1014/p/12149399.html)
 * [canal-admin的高可用使用，单机使用，HA使用，阿里的canal的UI界面，管理canal的实例](https://www.icode9.com/content-4-454188.html)
-* [mysql主从复制](https://baijiahao.baidu.com/s?id=1685556899002728376&wfr=spider&for=pc)
-  \`\`\`shell script
-  sudo yum install -y yum-utils device-mapper-persistent-data lvm2
-  docker pull daocloud.io/library/mysql:5.7
-      ```shell script
-      mkdir -p /mysql/data   /mysql/logs  /mysql/conf
-      cd /mysql/conf
-      touch my.cnf
-      ```
+* [mysql主从复制](https://baijiahao.baidu.com/s?id=1685556899002728376&wfr=spider&for=pc)  
+  \`\`\`shell script  
+  sudo yum install -y yum-utils device-mapper-persistent-data lvm2  
+  docker pull daocloud.io/library/mysql:5.7`  
+      mkdir -p /mysql/data   /mysql/logs  /mysql/conf  
+      cd /mysql/conf  
+      touch my.cnf`
 
-      ```shell script
-  docker run -d -p 3306:3306 \
-  --restart always  \
-  --privileged=true  \
-  -v /docker/mysql/conf:/etc/mysql/conf.d \
-  -v /mysql/logs:/logs \
-  -v /docker/mysql/data:/var/lib/mysql \
-  -e MYSQL_ROOT_PASSWORD=123456  \
-  --name mysql 718a6da099d8 \
-  --character-set-server=utf8mb4 \
-  --collation-server=utf8mb4_general_ci
+*     ```shell script
+
+  docker run -d -p 3306:3306 \  
+  --restart always  \  
+  --privileged=true  \  
+  -v /docker/mysql/conf:/etc/mysql/conf.d \  
+  -v /mysql/logs:/logs \  
+  -v /docker/mysql/data:/var/lib/mysql \  
+  -e MYSQL\_ROOT\_PASSWORD=123456  \  
+  --name mysql 718a6da099d8 \  
+  --character-set-server=utf8mb4 \  
+  --collation-server=utf8mb4\_general\_ci
 
 ```
 [Canal Server+Canal Admin](https://www.cnblogs.com/dalianpai/p/13620035.html)
@@ -33,32 +32,32 @@ log-bin=mysql-bin     \# 开启 binlog
 binlog-format=ROW     \# 选择 ROW 模式  
 server\_id=1         \# 配置 MySQL replaction 需要定义，不要和 canal 的 slaveId 重复
 
-    - 授权 canal 链接 MySQL 账号具有作为 MySQL slave 的权限, 如果已有账户可直接 grant
-    ```sql
-    -- 新建用户
-    CREATE USER canal IDENTIFIED BY 'canal';  
+* 授权 canal 链接 MySQL 账号具有作为 MySQL slave 的权限, 如果已有账户可直接 grant  
+  \`\`\`sql  
+  -- 新建用户  
+  CREATE USER canal IDENTIFIED BY 'canal';
 
-    -- GRANT ALL PRIVILEGES ON *.* TO 'canal'@'%' ;
-    GRANT SELECT, REPLICATION SLAVE, REPLICATION CLIENT ON *.* TO 'canal'@'%';
+  -- GRANT ALL PRIVILEGES ON _._ TO 'canal'@'%' ;  
+  GRANT SELECT, REPLICATION SLAVE, REPLICATION CLIENT ON _._ TO 'canal'@'%';
 
-    -- 刷新权限
-    FLUSH PRIVILEGES;
+  -- 刷新权限  
+  FLUSH PRIVILEGES;
 
 ## Canel Admin部署
 
 * 下载镜像  
-  `shell script  
-  [root@nacos ~]#  docker pull canal/canal-admin:v1.1.4  
-  v1.1.4: Pulling from canal/canal-admin  
-  1c8f9aa56c90: Pull complete  
-  c5e21c824d1c: Pull complete  
-  4ba7edb60123: Pull complete  
-  6c0a775b3e51: Pull complete  
-  ff741e81e02e: Pull complete  
-  1532a9748c0a: Pull complete  
-  a18427141526: Pull complete  
-  Digest: sha256:c3ac54daae37b14ec32fb6a125dc9ceb243377dd147ac53af9f9f6cdf18aeac3  
-  Status: Downloaded newer image for canal/canal-admin:v1.1.4  
+  `shell script    
+  [root@nacos ~]#  docker pull canal/canal-admin:v1.1.4    
+  v1.1.4: Pulling from canal/canal-admin    
+  1c8f9aa56c90: Pull complete    
+  c5e21c824d1c: Pull complete    
+  4ba7edb60123: Pull complete    
+  6c0a775b3e51: Pull complete    
+  ff741e81e02e: Pull complete    
+  1532a9748c0a: Pull complete    
+  a18427141526: Pull complete    
+  Digest: sha256:c3ac54daae37b14ec32fb6a125dc9ceb243377dd147ac53af9f9f6cdf18aeac3    
+  Status: Downloaded newer image for canal/canal-admin:v1.1.4    
   docker.io/canal/canal-admin:v1.1.4`
 
 * 启动容器  
