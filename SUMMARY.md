@@ -1,3 +1,13 @@
+---
+title: 公共服务组文档库
+theme-default:
+  showLevel: true
+plugins:
+  - summary
+  - toggle-chapters
+  - theme-comscore
+---
+
 # 目录
 
 1. [学习计划](/docs/README.md)
