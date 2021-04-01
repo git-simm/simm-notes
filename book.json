@@ -6,5 +6,5 @@
    "theme-default": {
      "showLevel": true
    },
-   "plugins": ["summary","back-to-top-button"]
+   "plugins": ["summary","back-to-top-button","chapter-fold"]
 }
