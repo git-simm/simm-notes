@@ -6,6 +6,6 @@
   * [内存清理](/docs/oper/sonar/study.md)
 * [第二章 架构设计方法论](shou-dao.md)
   * [五视图法](/docs/structure/design.md)
-
-
+* [Linux常用指令](linuxchang-yong-zhi-ling.md)
+  * [docker的处理](linuxchang-yong-zhi-ling/shou-dao.md)
 
