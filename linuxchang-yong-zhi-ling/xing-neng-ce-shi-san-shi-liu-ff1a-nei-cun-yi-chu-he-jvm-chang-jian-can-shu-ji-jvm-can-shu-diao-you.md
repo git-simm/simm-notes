@@ -1,15 +1,14 @@
+[https://www.cnblogs.com/zhongyehai/p/10306827.html](https://www.cnblogs.com/zhongyehai/p/10306827.html)
+
 堆内存溢出：
 
 此种溢出，加内存只能缓解问题，不能根除问题，需优化代码  
 堆内存中存在大量对象，这些对象都有被引用，当所有对象占用空间达到堆内存的最大值，就会出现内存溢出OutOfMemory:Java heap space
 
-  
 永久代溢出
 
 如果发生，则是在初始化的时候，空间太小，解决办法，扩大空间  
 类的一些信息，如类名、访问修饰符、字段描述、方法描述等，所占空间大于永久代最大值，就会出现OutOfMemoryError:PermGen space
-
-
 
 内存溢出的检测方法：pid=1730
 
@@ -21,11 +20,11 @@ Jdk/bin目录下有很多检测工具
 　　Jvisualvm  
 命令行工具：
 
-　　Jstat –gcutil pid 1000 100 （只需要看O，如果达到100%，并且长期处于100%，则代表老年代内存不足）
+Jstat –gcutil pid 1000 100 （只需要看O，如果达到100%，并且长期处于100%，则代表老年代内存不足）
 
-　　　　pid：进程号、1000：1秒钟获取一次、100一共获取100次
+pid：进程号、1000：1秒钟获取一次、100一共获取100次
 
-　　　　E：eden区  
+E：eden区  
 　　　　O：老年代  
 　　　　P：永久代  
 　　　　YGC：新生代的GC次数  
@@ -36,16 +35,12 @@ Jdk/bin目录下有很多检测工具
 
 ![](https://img2018.cnblogs.com/blog/1406024/201901/1406024-20190124220555599-1252550293.png)
 
-
-
-　　Jmap –histo pid \| head -20  
+Jmap –histo pid \| head -20  
 　　把当前JVM里面的所有对象打印出来，排序，head：头部，head -20 前20行
 
 ![](https://img2018.cnblogs.com/blog/1406024/201901/1406024-20190124230307205-1367180003.png)
 
-
-
-　　Jmap –heap pid（列出当前进程的堆的数据，一般用来看当前配置）
+Jmap –heap pid（列出当前进程的堆的数据，一般用来看当前配置）
 
 ![](https://img2018.cnblogs.com/blog/1406024/201901/1406024-20190124221541031-1790056843.png)
 
@@ -57,11 +52,7 @@ Jdk/bin目录下有很多检测工具
 
 ![](https://img2018.cnblogs.com/blog/1406024/201901/1406024-20190124222435318-1904063380.png)
 
-
-
 FullGC频率：单次FullGC时间&lt;200ms
-
-
 
 Jvm常见参数  
 -Xms2048m，初始堆大小，建议&lt;物理内存的1/4，默认值为物理内存的1/64  
@@ -73,9 +64,7 @@ Jvm常见参数
 -XX:SurvivorRatio=8：年轻带中Eden区和Survivor区的比例，默认为8:1:1，即Eden（8），From Space（1），ToSpace（1）  
 -XX:+UseConcMarkSweepGC：开启CMS垃圾回收器
 
-
-
- 看一下内存溢出的情况
+看一下内存溢出的情况
 
 先配置一下tomcat里面JVM的参数：vi /home/server/tomcat-PerfTeach01/bin/catalina.sh
 
@@ -93,15 +82,15 @@ Jvm常见参数
 
 ![](https://img2018.cnblogs.com/blog/1406024/201901/1406024-20190124213122166-1879349732.png)
 
- 能访问，代表启动成功：http://localhost:8080/PerfTeach/MemoryLeak?userId=123&password=abc&waitTime=3
+能访问，代表启动成功：[http://localhost:8080/PerfTeach/MemoryLeak?userId=123&password=abc&waitTime=3](http://localhost:8080/PerfTeach/MemoryLeak?userId=123&password=abc&waitTime=3)
 
 ![](https://img2018.cnblogs.com/blog/1406024/201901/1406024-20190124215117494-2083198097.png)
 
- jmeter5个并发永远跑
+jmeter5个并发永远跑
 
 ![](https://img2018.cnblogs.com/blog/1406024/201901/1406024-20190124223240832-1851751901.png)
 
- TPS
+TPS
 
 ![](https://img2018.cnblogs.com/blog/1406024/201901/1406024-20190124224000072-1259274399.png)
 
@@ -121,8 +110,6 @@ jvisualvm
 
 ![](https://img2018.cnblogs.com/blog/1406024/201901/1406024-20190124224956696-776479547.png)
 
-
-
 看一下tomcat日志的后200行
 
 ![](https://img2018.cnblogs.com/blog/1406024/201901/1406024-20190124224629319-1712119131.png)
@@ -137,13 +124,11 @@ jvisualvm
 
 直接告诉开发，让开发去解决![](https://img2018.cnblogs.com/blog/1406024/201901/1406024-20190124230904903-1383340107.png)
 
- jvisualvm也可以生成快照，一开始出现内存泄漏的时候就点堆Dump在服务器下生成快照，下载后再用 jvisualvm打开， jvisualvm\_文件\_装入\_文件类型选“线程 Dump”
+jvisualvm也可以生成快照，一开始出现内存泄漏的时候就点堆Dump在服务器下生成快照，下载后再用 jvisualvm打开， jvisualvm\_文件\_装入\_文件类型选“线程 Dump”
 
 ![](https://img2018.cnblogs.com/blog/1406024/201901/1406024-20190124232152654-1762957857.png)
 
 ![](https://img2018.cnblogs.com/blog/1406024/201901/1406024-20190124232237072-1943056804.png)
-
-
 
 由于这个内存泄漏的原因其实是session引起的，所以最好把tomcat的session持久化取消掉，以免下次启动tomcat又加载上一次保留的session
 
@@ -155,13 +140,9 @@ jvisualvm
 
 ![](https://img2018.cnblogs.com/blog/1406024/201901/1406024-20190125204626495-320264402.png)![](https://img2018.cnblogs.com/blog/1406024/201901/1406024-20190125204653505-941748346.png)
 
-
-
 内存泄漏的本质：老年代空间里面东西放满了，又不能被回收
 
 程序一旦出现内存泄漏，就算停止压测也不能解决，只能重启
-
-
 
 内存泄露会出现的现象  
 1，tps出现大幅波动，并慢慢降低，甚至降为0，响应时间随之波动，慢慢升高  
@@ -169,31 +150,26 @@ jvisualvm
 3，通过jconsole/jvisualvm可以看到，堆内存曲线不断上升，接近上限时，变成一条直线  
 4，日志报错java.lang.OutOfMemoryError: Java heap space
 
-
-
 内存泄露定位  
 1，通过jmap命令：jmap -histo pid \| head -20，查看当前堆内存中实例数和占用内存最多的前20个对象  
 2，通过jvisualvm，进行远程堆dump，然后把dump文件下载下来，用jvisualvm打开进行分析，可以看到更直观的jvm中对象的信息
-
-
 
 监控内存泄露问题的场景  
 1，在试压阶段，或任意场景都可以考虑通过jvisualvm和jstat监控jvm的情况  
 2，在稳定性场景中，一定要关注Jvm内存使用的情况，在长时间的压测下，最容易看出内存泄露的问题
 
-
-
 JVM参数调优
 
-Jvm常用参数  
----------------------------------------  
+## Jvm常用参数
+
 堆内存 = 年轻代+老年代  
-年轻代 = Eden+Survivor  
-Survivor = From Space+To Space  
----------------------------------------  
-年轻代 = Eden+From Space+To Space  
-堆内存=Eden+From Space+To Space+老年代  
-====================================
+年轻代 = Eden+Survivor
+
+## Survivor = From Space+To Space
+
+年轻代 = Eden+From Space+To Space
+
+# 堆内存=Eden+From Space+To Space+老年代
 
 -Xms2048m，初始堆大小，建议&lt;物理内存的1/4，默认值为物理内存的1/64  
 -Xmx2048m，最大堆大小，建议与-Xms保持一致，默认值为物理内存的1/4  
@@ -225,9 +201,9 @@ CMS相关参数
 -XX:ParallelGCThreads=8：并行收集器的线程数，此值最好配置与处理器数目相等 同样适用于CMS
 
 日志参数：  
--XX:+HeapDumpOnOutOfMemoryError：当发生内存溢出时，进行堆内存dump，一般把这个打开  
--XX:+PrintGCDetails：打印GC的详细信息  
-======================================================================
+-XX:+HeapDumpOnOutOfMemoryError：当发生内存溢出时，进行堆内存dump，一般把这个打开
+
+# -XX:+PrintGCDetails：打印GC的详细信息
 
 企业实际配置  
 -server -Xms1028m -Xmx1028m -XX:PermSize=256m -XX:MaxPermSize=256m -Xmn512m -XX:MaxDirectMemorySize=1g -XX:SurvivorRatio=10  
