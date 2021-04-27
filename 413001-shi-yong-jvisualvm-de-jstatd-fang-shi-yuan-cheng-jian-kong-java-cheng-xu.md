@@ -1,6 +1,6 @@
 # [利用VisualVm远程监控Java进程](https://segmentfault.com/a/1190000016634627)
 
-[  
+[    
 ](https://segmentfault.com/u/chanjarster)转载：[https://segmentfault.com/a/1190000016634627](https://chanjarster.github.io/post/visualvm-remote-monitoring/)
 
 本文介绍利用[VisualVm](https://visualvm.github.io/)和[jstatd](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/jstatd.html)来远程监控Java进程的方法。
@@ -44,7 +44,7 @@ host or ip
 * 远程主机没有DNS name，但VisualVm所在主机的
   `/etc/hosts`
   里配置了
-  `some-name `
+  `some-name`
   `<`
   `ip-to-remote-host`
   `>`
@@ -65,7 +65,7 @@ host or ip
 * 上面两种方式混合，即在VisualVm所在主机的
   `/etc/hosts`
   里配置
-  `some-name `
+  `some-name`
   `<`
   `ip-to-remote-host-nat-address`
   `>`

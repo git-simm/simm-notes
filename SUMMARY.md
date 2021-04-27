@@ -9,6 +9,7 @@
 * [Linux常用指令](linuxchang-yong-zhi-ling.md)
   * [docker的处理](linuxchang-yong-zhi-ling/shou-dao.md)
   * [性能测试三十六：内存溢出和JVM常见参数及JVM参数调优](/linux-ivm-tuning.md)
-* 第四章 JVM调优
+* [第四章 JVM调优](di-si-zhang-jvm-diao-you.md)
   * [4.1、使用jvisualvm的jstatd方式远程监控Java程序](413001-shi-yong-jvisualvm-de-jstatd-fang-shi-yuan-cheng-jian-kong-java-cheng-xu.md)
+  * 4.2、VisualVM使用jstatd远程监控jvm
 
