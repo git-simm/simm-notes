@@ -14,4 +14,5 @@
   * 4.2、VisualVM使用jstatd远程监控jvm
 * [第五章 Yapi的试用](di-wu-zhang-yapi-de-shi-yong.md)
   * [mongo的安装](di-wu-zhang-yapi-de-shi-yong/mongode-an-zhuang.md)
+  * [yapi的安装](di-wu-zhang-yapi-de-shi-yong/yapide-an-zhuang.md)
 
