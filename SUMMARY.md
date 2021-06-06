@@ -12,4 +12,6 @@
 * [第四章 JVM调优](di-si-zhang-jvm-diao-you.md)
   * [4.1、使用jvisualvm的jstatd方式远程监控Java程序](413001-shi-yong-jvisualvm-de-jstatd-fang-shi-yuan-cheng-jian-kong-java-cheng-xu.md)
   * 4.2、VisualVM使用jstatd远程监控jvm
+* [第五章 Yapi的试用](di-wu-zhang-yapi-de-shi-yong.md)
+  * [mongo的安装](di-wu-zhang-yapi-de-shi-yong/mongode-an-zhuang.md)
 
