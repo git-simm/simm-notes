@@ -15,4 +15,6 @@
 * [第五章 Yapi的试用](di-wu-zhang-yapi-de-shi-yong.md)
   * [mongo的安装](di-wu-zhang-yapi-de-shi-yong/mongode-an-zhuang.md)
   * [yapi的安装](di-wu-zhang-yapi-de-shi-yong/yapide-an-zhuang.md)
+* [第六章 网站性能压测](di-liu-zhang-wang-zhan-xing-neng-ya-ce.md)
+  * [6.1、ab工具的使用](di-liu-zhang-wang-zhan-xing-neng-ya-ce/61abgong-ju-de-shi-yong.md)
 
