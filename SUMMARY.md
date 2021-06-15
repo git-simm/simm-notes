@@ -17,4 +17,6 @@
   * [yapi的安装](di-wu-zhang-yapi-de-shi-yong/yapide-an-zhuang.md)
 * [第六章 网站性能压测](di-liu-zhang-wang-zhan-xing-neng-ya-ce.md)
   * [6.1、ab工具的使用](di-liu-zhang-wang-zhan-xing-neng-ya-ce/61abgong-ju-de-shi-yong.md)
+* 第七章  Git常规操作
+  * [Git命令](gitming-ling.md)
 
