@@ -2,8 +2,9 @@
 
 * [前言](README.md)
 * [第一章  基础服务的安装](di-yi-zhang.md)
-  * [神的觉醒](/docs/oper/cmd/netstat-oper.md)
-  * [内存清理](/docs/oper/sonar/study.md)
+  * [1.1、神的觉醒](/docs/oper/cmd/netstat-oper.md)
+  * [1.2、内存清理](/docs/oper/sonar/study.md)
+  * [1.3、JDK操作](docs/oper/cmd/13jdkcao-zuo.md)
 * [第二章 架构设计方法论](shou-dao.md)
   * [五视图法](/docs/structure/design.md)
 * [第三章 Linux常用指令](linuxchang-yong-zhi-ling.md)
@@ -13,10 +14,10 @@
   * [4.1、使用jvisualvm的jstatd方式远程监控Java程序](413001-shi-yong-jvisualvm-de-jstatd-fang-shi-yuan-cheng-jian-kong-java-cheng-xu.md)
   * 4.2、VisualVM使用jstatd远程监控jvm
 * [第五章 Yapi的试用](di-wu-zhang-yapi-de-shi-yong.md)
-  * [mongo的安装](di-wu-zhang-yapi-de-shi-yong/mongode-an-zhuang.md)
-  * [yapi的安装](di-wu-zhang-yapi-de-shi-yong/yapide-an-zhuang.md)
+  * [5.1、mongo的安装](di-wu-zhang-yapi-de-shi-yong/mongode-an-zhuang.md)
+  * [5.2、yapi的安装](di-wu-zhang-yapi-de-shi-yong/yapide-an-zhuang.md)
 * [第六章 网站性能压测](di-liu-zhang-wang-zhan-xing-neng-ya-ce.md)
   * [6.1、ab工具的使用](di-liu-zhang-wang-zhan-xing-neng-ya-ce/61abgong-ju-de-shi-yong.md)
 * 第七章  Git常规操作
-  * [Git命令](gitming-ling.md)
+  * [7.1、Git命令](gitming-ling.md)
 
