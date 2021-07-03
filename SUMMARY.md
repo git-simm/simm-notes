@@ -20,4 +20,6 @@
   * [6.1、ab工具的使用](di-liu-zhang-wang-zhan-xing-neng-ya-ce/61abgong-ju-de-shi-yong.md)
 * 第七章  Git常规操作
   * [7.1、Git命令](gitming-ling.md)
+* [第八章 K8S的安装部署](di-ba-zhang-k8s-de-an-zhuang-bu-shu.md)
+  * [8.1、docker冲突](di-ba-zhang-k8s-de-an-zhuang-bu-shu/81dockerchong-tu.md)
 
