@@ -29,8 +29,11 @@ source ~/.bash\_profile
 ```
 Process: 1532 ExecStart=/usr/bin/kube-apiserver $KUBE_LOGTOSTDERR $KUBE_LOG_LEVEL $KUBE_ETCD_SERVERS $KUBE_API_ADDRESS $KUBE_API_PORT $KUBELET_PORT $KUBE_ALLOW_PRIV $KUBE_SERVICE_ADDRESSES $KUBE_ADMISSION_CONTROL $KUBE_API_ARGS (code=exited, status=2)
  Main PID: 1532 (code=exited, status=2)
- 
 ```
+
+
+
+![](/assets/import132.png)
 
 
 
