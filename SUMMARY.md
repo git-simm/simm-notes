@@ -22,4 +22,5 @@
   * [7.1、Git命令](gitming-ling.md)
 * [第八章 K8S的安装部署](di-ba-zhang-k8s-de-an-zhuang-bu-shu.md)
   * [8.1、docker冲突](di-ba-zhang-k8s-de-an-zhuang-bu-shu/81dockerchong-tu.md)
+  * [8.2、yum安装kubectl时报错](di-ba-zhang-k8s-de-an-zhuang-bu-shu/82yuman-zhuang-kubectl-shi-bao-cuo.md)
 
