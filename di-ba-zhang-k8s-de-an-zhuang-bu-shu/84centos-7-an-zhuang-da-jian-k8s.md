@@ -1,5 +1,7 @@
 [\[Centos 7 安装搭建K8S\]](https://www.jianshu.com/p/65ecef9016ae\)
 
+https://blog.csdn.net/zhangzq86/article/details/86481538
+
 #### 1、环境准备
 
 CentOS Linux release 7.5.1804 \(Core\)  
@@ -125,7 +127,6 @@ node
 
 ```
 [root@k8s-master ~]# ntpdate ntp1.aliyun.com
-
 ```
 
 #### 2、部署master主机
@@ -144,7 +145,6 @@ master
 # yum install 
 -
 y etcd
-
 ```
 
 yum安装的etcd默认的配置文件为/etc/etcd/etcd.conf，编辑配置文件：
@@ -231,7 +231,6 @@ etcd
 cluster 
 is
  healthy
-
 ```
 
 ##### 2.2 安装Docker和Docker私有仓库
@@ -247,8 +246,7 @@ master
 -
 distribution 
 -
-y 
-
+y
 ```
 
 配置Docker 配置文件，允许从registry中拉取镜像。
@@ -261,7 +259,6 @@ if [ -z "${DOCKER_CERT_PATH}" ]; then
 fi
 
 OPTIONS='--insecure-registry registry:5000'
-
 ```
 
 设置开机自启动并开启服务：
@@ -286,7 +283,6 @@ master
 # systemctl enable docker docker
 -
 distribution
-
 ```
 
 ##### 2.3 安装kubernetes
@@ -301,7 +297,6 @@ master
 # yum install 
 -
 y kubernetes
-
 ```
 
 在master 主机上需要运行的kubernetes 组件有：kubernetes API server，kubernetes Controller Manager ，Kubernetes Scheduler，需要分别修改下述对应配置：
@@ -413,7 +408,6 @@ controller
 manager kube
 -
 scheduler
-
 ```
 
 #### 3、部署node主机
@@ -436,7 +430,6 @@ node
 # yum install 
 -
 y kubernetes
-
 ```
 
 在node节点上需要启动kubernetes 下述组件：kubelet、kubernets-Proxy，因此需要相应修改下述配置。
@@ -542,7 +535,6 @@ node
 # systemctl start kubelet kube
 -
 proxy
-
 ```
 
 在master 上查看集群节点状态：
@@ -583,7 +575,6 @@ node
  Ready 
 13
 s
-
 ```
 
 #### 4、安装覆盖网络-Flannel
@@ -599,8 +590,7 @@ Installed
 
   flannel.x86_64 0
 :
-0.7.1-4.el7 
-
+0.7.1-4.el7
 ```
 
 ##### 4.2 配置Flannel
